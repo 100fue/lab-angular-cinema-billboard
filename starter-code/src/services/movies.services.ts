@@ -1,19 +1,19 @@
 import { Injectable } from "@angular/core";
-import movies from "../assets/sample-movies";
+import  movies  from "../assets/sample-movies";
 
 @Injectable()
-export class MoviesServices {
-    Movies: Array<Object> = movies;
+export class MoviesService {
+  Movies: Array<Object> = movies;
 
-    getMovies() {
+  getMovies() {
+    return movies;
+  }
+
+  getMovie(id: Number) {
+    return this.Movies.filter(e => {
+      if (this.Movies === movies) {
         return movies;
-    }
-
-    getMovie(id: Number) {
-        // this.Movies.filter(e => {
-        //     if (this.Movies === movies) {
-        //         return movies;
-        //     }
-        // })
-    }
+      }
+    });
+  }
 }
